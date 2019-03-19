@@ -4,4 +4,4 @@ RUN apk add --no-cache gcc musl-dev ccache meson gcovr && \
     wget https://github.com/ebassi/mutest/archive/master.tar.gz && \
     tar x -f master.tar.gz && \\
     cd mutest-master && \
-    meson build --prefix=/usr && cd build && ninja install
+    meson mutest-master build --prefix=/usr && ninja -C build install
